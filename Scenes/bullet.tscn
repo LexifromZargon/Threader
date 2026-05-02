@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://jeisc1juarc1"]
+
+[node name="Node2D" type="Node2D" unique_id=1411397031]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1914351549]
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=1951226943]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D/Sprite2D" unique_id=460508178]
