@@ -1,9 +1,2 @@
-res://Scripts/player.gd
-res://Scenes/bullet.tscn
-res://Scenes/weapon.tscn
-res://Scenes/weapon.gd
-res://Scenes/projectile.tscn
-res://Scenes/projectile.gd
-res://Scenes/world.tscn
-res://Scenes/weapon_socket.gd
 res://Scenes/player.tscn
+res://Scripts/player.gd
