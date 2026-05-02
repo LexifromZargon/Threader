@@ -12,6 +12,12 @@ GameState :: enum {
 	GAMEPLAY,
 }
 
+
+TileType :: enum {
+	STATIC,
+	PINCUSHION,
+}
+
 PlayerType :: enum {
 	ENEMY,
 	PLAYER,
