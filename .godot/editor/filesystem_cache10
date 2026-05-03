@@ -1,14 +1,14 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1777752572
+::res://::1777754455
 icon.svg::CompressedTexture2D::4176825010112742751::1777751449::1777751449::1::::<><><>0<>0<>d53f2286fa2e55a6e0272b4dee360e9c<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-::res://Assets/::1777753615
+::res://Assets/::1777753627
 base_face_right_threadit.png::CompressedTexture2D::1884944636459798011::1777751449::1777751449::1::::<><><>0<>0<>7c118c37309c78b6f3a9c471025b4d18<>res://.godot/imported/base_face_right_threadit.png-07590c3d6c51ced2eed7b8c070049aa9.ctex::
 needle.png::CompressedTexture2D::2793771709039775504::1777751449::1777751449::1::::<><><>0<>0<>f1746b4a0263b58ad1df9888aab174f8<>res://.godot/imported/needle.png-170354e555a5db85d916a89dc6ef8d77.ctex::
 walk2.png::CompressedTexture2D::8519150444364593774::1777753603::1777753627::1::::<><><>0<>0<>175eac51f8aadea4a33c430ab8bb9f8b<>res://.godot/imported/walk2.png-d9835eb91c1931c2e4af305e54cf7247.ctex::
 walk.png::CompressedTexture2D::7438572134740626085::1777752426::1777752771::1::::<><><>0<>0<>c61f00796c121653117e458cb96975c7<>res://.godot/imported/walk.png-94b13513240aeacb1f8ac46e5e577dee.ctex::
-::res://Scenes/::1777753321
+::res://Scenes/::1777756310
 bullet.tscn::PackedScene::640475129638230786::1777751449::0::1::::<><><>0<>0<><>::
-player.tscn::PackedScene::1874541438921975206::1777753321::0::1::::<><><>0<>0<><>::uid://brwp1xudq17on::::res://Scripts/player.gd
+player.tscn::PackedScene::1874541438921975206::1777756310::0::1::::<><><>0<>0<><>::uid://brwp1xudq17on::::res://Scripts/player.gd<>uid://dd8kgw5g6hiev::::res://Assets/walk.png<>uid://dtm0fsuwg7wo1::::res://Assets/walk2.png
 projectile.gd::GDScript::942848821744549225::1777751449::0::1::::<>CharacterBody2D<><>0<>0<><>::
 projectile.tscn::PackedScene::3209419124817242833::1777751449::0::1::::<><><>0<>0<><>::uid://bf2lanyv7r5dk::::res://Assets/needle.png<>uid://noyt2gm3t4a4::::res://Scenes/projectile.gd
 weapon.gd::GDScript::2085210910680127184::1777751449::0::1::::<>Node2D<><>0<>0<><>::
@@ -17,5 +17,5 @@ weapon_socket.gd::GDScript::4053505884267550888::1777751449::0::1::::<>Marker2D<
 world.tscn::PackedScene::8977620899357786381::1777751449::0::1::::<><><>0<>0<><>::uid://1ybonyfqvs51::::res://Scenes/player.tscn<>uid://0d08jgcox8s4::::res://Scenes/weapon.tscn
 ::res://Scenes/scripts/::1777751449
 player.gd::GDScript::7296116330276602031::1777751449::0::1::::<>CharacterBody2D<><>0<>0<><>::
-::res://Scripts/::1777751449
-player.gd::GDScript::3626005760753879577::1777751449::0::1::::<>CharacterBody2D<><>0<>0<><>::
+::res://Scripts/::1777755920
+player.gd::GDScript::3626005760753879577::1777755920::0::1::::<>CharacterBody2D<><>0<>0<><>::

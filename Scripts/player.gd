@@ -6,6 +6,7 @@ extends CharacterBody2D
 @export var running_speed = 150
 
 @onready var anim = $AnimatedSprite2D
+@onready var collision_shape = $CollisionShape2D
 
 func _physics_process(delta: float) -> void:
 	if !is_on_floor():
