@@ -1,18 +1,65 @@
 [gd_scene format=3 uid="uid://1ybonyfqvs51"]
 
 [ext_resource type="Script" uid="uid://brwp1xudq17on" path="res://Scripts/player.gd" id="1_cvnsp"]
-[ext_resource type="Texture2D" uid="uid://14c0604glvl0" path="res://Assets/base_face_right_threadit.png" id="2_cvnsp"]
+[ext_resource type="Texture2D" uid="uid://dd8kgw5g6hiev" path="res://Assets/walk.png" id="2_cvnsp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cvnsp"]
 size = Vector2(71, 124.5)
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=2009281698]
+[sub_resource type="AtlasTexture" id="AtlasTexture_x3wgy"]
+atlas = ExtResource("2_cvnsp")
+region = Rect2(2632, 0, 658, 776)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cvnsp"]
+atlas = ExtResource("2_cvnsp")
+region = Rect2(0, 0, 620, 776)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6t5aa"]
+atlas = ExtResource("2_cvnsp")
+region = Rect2(620, 0, 620, 776)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vgqql"]
+atlas = ExtResource("2_cvnsp")
+region = Rect2(1240, 0, 620, 776)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fkybt"]
+atlas = ExtResource("2_cvnsp")
+region = Rect2(1860, 0, 620, 776)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3smsa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x3wgy")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cvnsp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6t5aa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vgqql")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fkybt")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D" unique_id=2009281698]
 script = ExtResource("1_cvnsp")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1712203616]
 position = Vector2(-0.99999905, -65.3889)
 scale = Vector2(0.0325, 0.043740734)
-texture = ExtResource("2_cvnsp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=927259241]
 position = Vector2(0.5, -65.25)
@@ -20,3 +67,19 @@ shape = SubResource("RectangleShape2D_cvnsp")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1021355331]
 position = Vector2(2, -189)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=286296776]
+position = Vector2(-1, -75)
+scale = Vector2(0.12478603, 0.19828236)
+sprite_frames = SubResource("SpriteFrames_3smsa")
+animation = &"jump"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=137121025]
+visible = false
+
+[node name="GameOverLabel" type="Label" parent="CanvasLayer" unique_id=87513284]
+offset_left = -63.0
+offset_top = -91.0
+offset_right = 71.0
+offset_bottom = -68.0
+text = "Press R to restart"

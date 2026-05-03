@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bqi6bi8v0ijv7"]
+
+[ext_resource type="Texture2D" uid="uid://b0rjxyrn6x54f" path="res://icon.svg" id="1_aw0jv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_atpgl"]
+size = Vector2(65.5, 66.5)
+
+[node name="Rope" type="Node2D" unique_id=486051018]
+
+[node name="RopeHolder" type="StaticBody2D" parent="." unique_id=1148375505]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RopeHolder" unique_id=1236554092]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_atpgl")
+
+[node name="Sprite2D" type="Sprite2D" parent="RopeHolder/CollisionShape2D" unique_id=96124318]
+scale = Vector2(0.53125, 0.53125)
+texture = ExtResource("1_aw0jv")

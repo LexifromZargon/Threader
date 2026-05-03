@@ -2,17 +2,21 @@
 
 [ext_resource type="PackedScene" uid="uid://1ybonyfqvs51" path="res://Scenes/player.tscn" id="1_a02cp"]
 [ext_resource type="PackedScene" uid="uid://0d08jgcox8s4" path="res://Scenes/weapon.tscn" id="2_go701"]
+[ext_resource type="PackedScene" uid="uid://cudlcqa6f1um" path="res://Scenes/killzone.tscn" id="3_5a7ea"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_a02cp"]
 size = Vector2(1000, 100)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_go701"]
-size = Vector2(250.25, 88)
+size = Vector2(248.25, 88)
 
 [node name="World" type="Node2D" unique_id=973635438]
 
 [node name="plattform" type="StaticBody2D" parent="." unique_id=25960833]
 position = Vector2(603, 375)
+
+[node name="TileTexture" type="Sprite2D" parent="plattform" unique_id=746453212]
+position = Vector2(-603, -375)
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="plattform" unique_id=1459394507]
 modulate = Color(1, 0.219608, 1, 1)
@@ -24,23 +28,39 @@ mesh = SubResource("QuadMesh_a02cp")
 position = Vector2(-16.125, 45)
 shape = SubResource("RectangleShape2D_go701")
 
-[node name="plattform" type="StaticBody2D" parent="plattform" unique_id=152828174]
-position = Vector2(-737, 11)
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="plattform/plattform" unique_id=1722956889]
-modulate = Color(1, 0.219608, 1, 1)
-position = Vector2(-15.9999, 44)
-scale = Vector2(0.249, 0.87)
-mesh = SubResource("QuadMesh_a02cp")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="plattform/plattform" unique_id=1389368328]
-position = Vector2(-16.125, 45)
-shape = SubResource("RectangleShape2D_go701")
-
-[node name="CharacterBody2D" parent="." unique_id=1339467526 instance=ExtResource("1_a02cp")]
+[node name="Player" parent="." unique_id=1339467526 instance=ExtResource("1_a02cp")]
 position = Vector2(603, 375)
 gravity = 35
 jump_force = 711
 
-[node name="weapon" parent="CharacterBody2D" unique_id=2080833702 instance=ExtResource("2_go701")]
+[node name="weapon" parent="Player" unique_id=2080833702 instance=ExtResource("2_go701")]
 position = Vector2(37, -39)
+
+[node name="plattform2" type="StaticBody2D" parent="." unique_id=152828174]
+position = Vector2(-134, 386)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="plattform2" unique_id=1722956889]
+modulate = Color(1, 0.219608, 1, 1)
+position = Vector2(285.5, 29.499998)
+scale = Vector2(0.249, 0.87)
+mesh = SubResource("QuadMesh_a02cp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plattform2" unique_id=1389368328]
+position = Vector2(284.37482, 30.5)
+shape = SubResource("RectangleShape2D_go701")
+
+[node name="plattform3" type="StaticBody2D" parent="." unique_id=1251351238]
+position = Vector2(309, 43)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="plattform3" unique_id=27143074]
+modulate = Color(1, 0.219608, 1, 1)
+position = Vector2(285.5, 29.499998)
+scale = Vector2(0.249, 0.87)
+mesh = SubResource("QuadMesh_a02cp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plattform3" unique_id=380049399]
+position = Vector2(284.37482, 30.5)
+shape = SubResource("RectangleShape2D_go701")
+
+[node name="Killzone" parent="." unique_id=2051706329 instance=ExtResource("3_5a7ea")]
+position = Vector2(374, 1173)
