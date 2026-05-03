@@ -10,3 +10,6 @@ script = ExtResource("1_qv81b")
 position = Vector2(1, -0.99999905)
 scale = Vector2(0.609375, 0.19531249)
 texture = ExtResource("1_er6cq")
+
+[node name="BulletPoint" type="Marker2D" parent="." unique_id=1240562814]
+position = Vector2(50, 0)

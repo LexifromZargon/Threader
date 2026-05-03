@@ -54,7 +54,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=2009281698]
+[node name="Player" type="CharacterBody2D" unique_id=2009281698]
 script = ExtResource("1_cvnsp")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1712203616]
@@ -73,3 +73,13 @@ position = Vector2(-1, -75)
 scale = Vector2(0.12478603, 0.19828236)
 sprite_frames = SubResource("SpriteFrames_3smsa")
 animation = &"jump"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=137121025]
+visible = false
+
+[node name="GameOverLabel" type="Label" parent="CanvasLayer" unique_id=87513284]
+offset_left = -63.0
+offset_top = -91.0
+offset_right = 71.0
+offset_bottom = -68.0
+text = "Press R to restart"

@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var world = get_tree().get_root().get_node("World")
 @onready var projectile = load("res://Scenes/projectile.tscn")
-
+@onready var bullet_point = $BulletPoint
 @export var fire_rate := 0.1
 
 var can_shoot := true
@@ -15,10 +15,10 @@ func _ready() -> void:
 func shoot():
 	var instance = projectile.instantiate()
 	instance.dir = rotation
-	instance.spawnPos = global_position 
-	instance.spawnRot = rotation 
-	world.add_child.call_deferred(instance)
-	
+	instance.spawnPos = bullet_point.global_position 
+	instance.spawnRot = bullet_point.global_rotation
+	instance.dir = get_global_mouse_position().angle()
+	get_tree().root.add_child(instance)	
 func cooldown():
 	can_shoot = false
 	await get_tree().create_timer(fire_rate).timeout
@@ -30,6 +30,3 @@ func _process(delta: float) -> void:
 		shoot()
 		cooldown()
 		
-
-
-	
